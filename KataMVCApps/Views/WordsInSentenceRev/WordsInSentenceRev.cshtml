@@ -1,0 +1,33 @@
+﻿@model KataMVCApps.Models.WordsInSentenceRev
+
+   
+
+<h2>Reverse Each Word in a Sentence</h2>
+<brk></brk>
+<div class="row">
+    <div class="col-lg-6">
+
+        @using (Html.BeginForm("WordsInSentenceRev", "WordsInSentenceRev"))
+        {
+            <div class="form-group">
+
+                <label>Enter a sentence that will have its individual words reversed: </label>
+                @Html.TextBoxFor(w => w.userInput)
+            </div>
+             <button class="btn btn-primary">Submit</button>     
+        }
+
+        <brk></brk>
+
+        <div>
+
+            @if (!string.IsNullOrEmpty(Model.wordRev))
+            {
+                <h3>The words reversed are: </h3>
+                <p> @Model.wordRev</p>
+            }
+
+        </div>
+</div>
+</div>
+

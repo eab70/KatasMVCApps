@@ -1,0 +1,19 @@
+﻿@model KataMVCApps.Models.PalindromeModel
+@{
+    ViewBag.Title = "Palindrome";
+}
+
+<h2>Palindrome</h2>
+
+<div class="row">
+    <div class="col-lg-6">
+        @using (Html.BeginForm("PalindromeCheck", "Palindrome"))
+        {
+            <div class="form-group">
+                <label>Enter a word or phrase to check if it's a palindrome: </label>
+                @Html.TextBoxFor(m => m.input, new { @class = "form-control" })
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        }
+    </div>
+</div>
